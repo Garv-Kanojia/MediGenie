@@ -12,8 +12,8 @@ Complete Steps for running the project on the local browser:-
    6.4) requests
 7) After installing all the dependencies , run this command to open it in the browser "python manage.py runserver".
 8) Once you get this ctrl+click on the 'http://127.0.0.1:8000/'
-9) 
+   
 ![image](https://github.com/user-attachments/assets/22e4a8fe-4dbf-4163-8ad8-1121459b05d1)
 
-choose images from the demo images given in the MediGenie repo itself.
+Choose images from the demo images given in the MediGenie repo itself.<br>
 Accuracy - 86.7% (after fine tuning hyper parameters)
