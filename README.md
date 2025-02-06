@@ -5,11 +5,11 @@ Complete Steps for running the project on the local browser:-
 3) Open the MediGenie folder in the vs code, open the manage.py file and then open a new terminal.
 4) Then create a python virtual environment, using "python -m venv test" , test is the name of the virtual env.
 5) Once created acticvate it by the command, "test\Scripts\activate".
-6) After this install the following dependencies in it one by one, for e.g. pip install django
-   6.1) django
-   6.2) torch
-   6.3) torchvision
-   6.4) requests
+6) After this install the following dependencies in it one by one, for e.g. pip install django<br>
+   6.1) django<br>
+   6.2) torch<br>
+   6.3) torchvision<br>
+   6.4) requests<br>
 7) After installing all the dependencies , run this command to open it in the browser "python manage.py runserver".
 8) Once you get this ctrl+click on the 'http://127.0.0.1:8000/'
    
