@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}Results - MediGenie{% endblock %}
+
+{% block content %}
+<h2 class="text-center">Prediction Results</h2>
+
+<div class="card">
+    <div class="card-body">
+        <ul class="list-group">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                {{ predictions }}
+            </li>
+        </ul>
+        {% if top_predictions %}
+        <ul class="list-group">
+            {% for disease, prob in top_predictions %}
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                {{ disease }}
+                <span class="badge badge-primary badge-pill">{{ prob|floatformat:2 }}%</span>
+            </li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+    </div>
+</div>
+
+<div class="text-center mt-4">
+    <a href="{% url 'index' %}" class="btn btn-custom">Go Back</a>
+</div>
+{% endblock %}

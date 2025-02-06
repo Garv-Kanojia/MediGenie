@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}Home - MediGenie{% endblock %}
+
+{% block content %}
+<h2 class="text-center">MediGenie - Disease Prediction from Chest X-Rays</h2>
+<p class="text-center">Upload an image or provide a URL to predict diseases</p>
+
+<form action="{% url 'upload_image' %}" method="post" enctype="multipart/form-data" class="mb-5">
+    {% csrf_token %}
+    <div class="form-group">
+        <label for="image">Upload an Image</label>
+        <input type="file" class="form-control" id="image" name="image" required>
+    </div>
+    <button type="submit" class="btn btn-custom btn-block">Predict from Uploaded Image</button>
+</form>
+
+<form action="{% url 'upload_url' %}" method="post">
+    {% csrf_token %}
+    <div class="form-group">
+        <label for="image_url">Or Enter Image URL</label>
+        <input type="url" class="form-control" id="image_url" name="image_url"
+            placeholder="http://example.com/image.jpg" required>
+    </div>
+    <button type="submit" class="btn btn-custom btn-block">Predict from Image URL</button>
+</form>
+{% endblock %}
